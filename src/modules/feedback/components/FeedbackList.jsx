@@ -1,7 +1,7 @@
 import FeedbackItem from './FeedbackItem'
 import { useFeedbackContext } from '../store/FeedbackContext'
 
-export default function FeedbackList({ onDeleteFeedback }) {
+export default function FeedbackList() {
   const { state } = useFeedbackContext()
   let feedbacks = [...state.feedbacks]
   if (state.sort === 'popularity') {
@@ -15,7 +15,7 @@ export default function FeedbackList({ onDeleteFeedback }) {
   return (
     <div>
       {feedbacks.map(fb => (
-        <FeedbackItem key={fb.id} feedback={fb} onDelete={onDeleteFeedback} />
+        <FeedbackItem key={fb.id} feedback={fb} />
       ))}
     </div>
   )

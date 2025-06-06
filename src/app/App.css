@@ -40,3 +40,62 @@
 .read-the-docs {
   color: #888;
 }
+
+body.light-theme {
+  background: #f4f4f7;
+  color: #222;
+  transition: background 0.2s, color 0.2s;
+}
+body.dark-theme {
+  background: #23232b;
+  color: #f4f4f7;
+  transition: background 0.2s, color 0.2s;
+}
+
+.App {
+  background: var(--app-bg, #fff);
+  color: var(--app-color, #222);
+  transition: background 0.2s, color 0.2s;
+}
+
+body.dark-theme .App {
+  background: #2d2d39;
+  color: #f4f4f7;
+}
+body.light-theme .App {
+  background: #fff;
+  color: #222;
+}
+
+input, select {
+  background: #fff;
+  color: #222;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+body.dark-theme input, body.dark-theme select {
+  background: #444;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+button {
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+}
+body.light-theme button {
+  background: #222;
+  color: #fff;
+}
+body.dark-theme button {
+  background: #eee;
+  color: #222;
+}

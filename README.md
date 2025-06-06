@@ -1,12 +1,67 @@
-# React + Vite
+# Product Feedback Board
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+SPA-приложение для сбора и голосования за предложения по улучшению продукта.
 
-Currently, two official plugins are available:
+## 🚀 Возможности
+- Добавление предложений (фидбеков)
+- Удаление предложений
+- Голосование (лайк/дизлайк) за каждую идею
+- Сортировка по дате или популярности
+- Подсчет общего количества фидбеков
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧩 Уровни реализации
 
-## Expanding the ESLint configuration
+### 1. useState (Базовый)
+- Локальное состояние в компоненте App
+- Добавление и удаление предложений
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 2. Context API + useReducer (Средний)
+- Глобальное состояние через Context
+- Лайки/дизлайки, сортировка, счетчик
+- Разделение на store, components
+
+## 🗂 Структура
+```
+src/
+  app/
+    App.jsx
+  modules/
+    feedback/
+      components/
+        FeedbackForm.jsx
+        FeedbackList.jsx
+        FeedbackItem.jsx
+        FeedbackStats.jsx
+        FeedbackFilter.jsx
+      store/
+        FeedbackContext.jsx
+```
+
+## 🛠️ Технологии
+- React
+- Context API + useReducer
+- Vite
+
+## ⚡️ Запуск
+
+1. Установите зависимости:
+   ```bash
+   npm install
+   ```
+2. Запустите dev-сервер:
+   ```bash
+   npm run dev
+   ```
+3. Откройте [http://localhost:5173](http://localhost:5173) в браузере.
+
+---
+
+## 📦 Планы на будущее (уровень 3)
+- Zustand store
+- Категории, редактирование, сохранение в localStorage
+- Темная/светлая тема
+- Анимации, drag-and-drop, экспорт/импорт
+
+---
+
+**Автор:** NFactorial HW

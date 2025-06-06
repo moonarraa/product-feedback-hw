@@ -4,7 +4,7 @@ export default function FeedbackFilter() {
   const { state, dispatch } = useFeedbackContext()
   return (
     <div style={{ marginBottom: 16 }}>
-      <label>Сортировать: </label>
+      <label style={{ color: 'black' }}>Сортировать: </label>
       <select
         value={state.sort}
         onChange={e => dispatch({ type: 'SET_SORT', sort: e.target.value })}
